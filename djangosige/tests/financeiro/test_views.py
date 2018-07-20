@@ -4,14 +4,14 @@ from djangosige.tests.test_case import BaseTestCase, replace_none_values_in_dict
 from djangosige.apps.financeiro.models import MovimentoCaixa, Entrada, Saida, PlanoContasGrupo, PlanoContasSubgrupo
 from djangosige.apps.estoque.models import SaidaEstoque
 
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.db.models import Q
 
 from datetime import datetime, timedelta
 from decimal import Decimal
 import json
 import locale
-locale.setlocale(locale.LC_ALL, '')
+locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
 
 SUBGRUPO_PLANO_CONTAS_FORMSET_DATA = {
